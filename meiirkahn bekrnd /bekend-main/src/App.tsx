@@ -10,7 +10,6 @@ import './App.css'
 
 function App() {
   const { user, isAuthenticated } = useAuth()
-  const [screen, setScreen] = useState<'login' | 'register' | 'forgot'>('login')
   const [path, setPath] = useState(window.location.pathname)
 
   useEffect(() => {
@@ -31,22 +30,19 @@ function App() {
     return <AdminLogin onSwitchToUser={() => navigate('/')} />
   }
 
-  if (isAuthenticated) {
-    return <LabSupplyFinder />
+  if (!isAuthenticated) {
+    if (path === '/register') {
+      return <Register onSwitchToLogin={() => navigate('/')} />
+    }
+
+    if (path === '/forgot') {
+      return <ForgotPassword onSwitchToLogin={() => navigate('/')} />
+    }
+
+    return <Login onSwitchToRegister={() => navigate('/register')} onSwitchToForgotPassword={() => navigate('/forgot')} />
   }
 
-  return (
-    <>
-      {screen === 'login' && (
-        <Login
-          onSwitchToRegister={() => setScreen('register')}
-          onSwitchToForgotPassword={() => setScreen('forgot')}
-        />
-      )}
-      {screen === 'register' && <Register onSwitchToLogin={() => setScreen('login')} />}
-      {screen === 'forgot' && <ForgotPassword onSwitchToLogin={() => setScreen('login')} />}
-    </>
-  )
+  return <LabSupplyFinder />
 }
 
 export default App
