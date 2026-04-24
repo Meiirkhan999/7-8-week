@@ -134,16 +134,25 @@ npm run preview
 
 1. `docker-compose build`
 2. `docker-compose up -d`
-3. Фронтенд: `http://localhost:5173`, бэкенд: `http://localhost:3001/api/health`
+3. Фронтенд: `http://localhost:5173`
+4. Бэкенд: `http://localhost:3001/api/health`
+
+## 📊 Мониторинг (Prometheus + Grafana)
+
+- Prometheus: `http://localhost:9090`
+- Grafana: `http://localhost:3000`
+- Бэкенд метрикалары: `http://localhost:3001/metrics`
+- Prometheus бекеті `backend:3001`-ден метрикаларды алады
 
 ## 🔁 CI/CD (GitHub Actions)
 
 - Файл: `.github/workflows/ci.yml`
 - Әр push/PR үшін:
   - Frontend: `npm ci`, `npm run lint`, `npm run build`
-  - Backend: `npm ci`, Sequelize мұрағат синхронизациясы (`sequelize.sync({ alter: true })`)
+  - Backend: `npm ci`, Sequelize синхронизациясы (`sequelize.sync({ alter: true })`)
 
 ## 🔧 Тексеру
 
 - Backend: `curl http://localhost:3001/api/health`
 - Frontend: `curl http://localhost:3001/api/supplies`
+- Metrix: `curl http://localhost:3001/metrics`

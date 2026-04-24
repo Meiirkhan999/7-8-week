@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { act } from 'react-dom/test-utils';
+import { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AuthProvider } from '../../context/AuthContext';
 import { LabSupplyFinder } from '../LabSupplyFinder';
@@ -39,7 +39,7 @@ describe('LabSupplyFinder', () => {
       );
     });
 
-    expect(container.querySelector('input[placeholder*="Жабдықтарды"]')).not.toBeNull();
-    expect(container.querySelector('button.category-btn')).not.toBeNull();
+    expect(container.querySelector('input[placeholder*="атауы"]')).not.toBeNull();
+    expect(container.querySelector('button.filter-chip')).not.toBeNull();
   });
 });

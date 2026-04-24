@@ -1,6 +1,6 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
-COPY package.json package-lock.json tsconfig.json vite.config.ts ./
+COPY package.json package-lock.json tsconfig.json tsconfig.app.json tsconfig.node.json vite.config.ts index.html ./
 COPY public ./public
 COPY src ./src
 RUN npm ci

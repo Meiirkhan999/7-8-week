@@ -7,10 +7,29 @@ const jwt = require('jsonwebtoken');
 const { Op } = require('sequelize');
 const { sequelize, User, Supply, Favorite } = require('./models');
 const { v4: uuidv4 } = require('uuid');
+const promClient = require('prom-client');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 const JWT_SECRET = process.env.JWT_SECRET || 'lab-secret-key';
+
+const register = promClient.register;
+promClient.collectDefaultMetrics({ register });
+
+const httpRequestDuration = new promClient.Histogram({
+  name: 'http_request_duration_seconds',
+  help: 'HTTP request duration in seconds',
+  labelNames: ['method', 'route', 'status_code'],
+  buckets: [0.1, 0.3, 0.5, 1, 2, 5],
+});
+
+app.use((req, res, next) => {
+  const end = httpRequestDuration.startTimer({ method: req.method, route: req.path });
+  res.on('finish', () => {
+    end({ status_code: res.statusCode });
+  });
+  next();
+});
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -43,6 +62,15 @@ const authorizeAdmin = (req, res, next) => {
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
+});
+
+app.get('/metrics', async (req, res) => {
+  try {
+    res.set('Content-Type', register.contentType);
+    res.send(await register.metrics());
+  } catch (error) {
+    res.status(500).send(`Error collecting metrics: ${error.message}`);
+  }
 });
 
 app.post('/api/auth/register', async (req, res) => {
