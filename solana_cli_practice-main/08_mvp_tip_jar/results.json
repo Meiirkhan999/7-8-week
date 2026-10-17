@@ -1,0 +1,9 @@
+{
+  "module": "08_mvp_tip_jar",
+  "status": "SUCCESS",
+  "jar_pda": "6aKQVXh4MoHSx9V8bBMQygBhs6vjDKdzpFvZs6DyaXqD",
+  "owner": "z3r7pyhqMzJBjmpxDjkErGZ1Qh6aFmUkVV2VbeYapQn",
+  "tipper": "3iVPDgJFrHUCCW9jiQPwaYYDM6LFZuiy6LqieKAwVbdU",
+  "tip_amount_lamports": 500000000,
+  "tx_signature": "rnZkViXQDma8mJbRuUnqkxNjradvTry7mPaBMN6xpiqZmdobbyPeDx8Eg7eTxHs5bT36M5UQVoNdGbcY6zHFtB8"
+}

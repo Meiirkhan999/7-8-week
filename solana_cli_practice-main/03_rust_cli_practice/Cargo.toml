@@ -1,0 +1,12 @@
+[package]
+name = "rust_cli_practice"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rust_cli_practice"
+path = "src/main.rs"
+
+[dependencies]
+borsh = { version = "1.5.1", features = ["derive"] }
+thiserror = "1.0"

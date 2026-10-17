@@ -1,0 +1,24 @@
+# Build artifacts
+**/target/*
+!**/target/idl
+**/target/idl/*
+!**/target/idl/*.json
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Local Solana test validator ledgers & anchor caches
+test-ledger/
+**/test-ledger/
+.anchor/
+**/.anchor/
+
+# OS specific files
+.DS_Store
+**/.DS_Store
+*.log
+
+# Sensitive private keypairs
+*-keypair.json
+**/*-keypair.json

@@ -1,0 +1,14 @@
+{
+  "module": "07_spl_tokens",
+  "status": "SUCCESS",
+  "cluster": "http://127.0.0.1:8899",
+  "spl_token_mint": "2broynvVmjAxcjppzG43W3VAcE7BUsYDDQF7G1rDc2Fa",
+  "payer_ata": "SGBnWv8pJXbT8RT3h8ivckATyNaMXRfz4rqrNr8sRXt",
+  "receiver_ata": "45SC3xiBL9coiFdDxGpHh85eEsmPt4tqVT8gvRsmUovg",
+  "mint_tx_signature": "627UQNBQWvNqhu1oaZRb1kLHucDnUUrpwQaCcwNAFFfJWaG5BBL12Gx3kUQpNcABQ7rsmDRNrkFby64SiCDMPBvq",
+  "transfer_tx_signature": "3FSHMhQzf631baQwAe4GctpCK7TT2REiUVZJS6fAYEf5LVJAuDCrDU4BiZ4KxFAUigKeNhC8M1eeMZ5BStSgGMCD",
+  "payer_final_balance": 750000,
+  "receiver_final_balance": 250000,
+  "token_2022_mint": "2xRhMkJSjfGiTqWJdU7gVjL4qWAnU2gezNHXGDzF1abH",
+  "token_2022_tx_signature": "57d5bmas4ajHyTLucAq6mjAAVYsVrF3FsCVNGaVDEmi6jQv7wjeKz2DHjmurmXAxQyEbKs1U1BtBYkW8UFQBwAUq"
+}

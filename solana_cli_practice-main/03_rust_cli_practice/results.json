@@ -1,0 +1,8 @@
+{
+  "module": "03_rust_cli_practice",
+  "status": "SUCCESS",
+  "serialized_bytes_len": 67,
+  "final_balance_lamports": 6500000000,
+  "final_reward_points": 2500,
+  "role": "Validator"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "07-spl-tokens",
+  "version": "1.0.0",
+  "description": "Solana SPL Token Pipeline and Token-2022 Integration",
+  "main": "scripts/token_flow.ts",
+  "scripts": {
+    "start": "tsx scripts/token_flow.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.95.8",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "module": "04_native_program",
+  "status": "SUCCESS",
+  "program_id": "BGnG1xneUN1szsMATutNitmDsm8v7741wwhaCVSVzABa",
+  "deployment_tx_signature": "fsEWKoWwBinHHmKFtqS8nebVMSCSc2B2J48fjRnPxYHMWHV7U",
+  "artifact_path": "./04_native_program/target/deploy/native_program.so"
+}
