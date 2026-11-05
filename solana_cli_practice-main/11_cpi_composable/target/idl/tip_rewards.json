@@ -1,0 +1,479 @@
+{
+  "address": "CQvQzgw8V9rFgAqmBS4E1qNCgQMHe7agWXhkKNwgZs8r",
+  "metadata": {
+    "name": "tip_rewards",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Composable rewards layer: CPI into tip_jar + SPL Token + Associated Token programs"
+  },
+  "instructions": [
+    {
+      "name": "init_rewards",
+      "discriminator": [
+        24,
+        217,
+        207,
+        96,
+        28,
+        211,
+        144,
+        146
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "reward_mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  119,
+                  97,
+                  114,
+                  100,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "tip_with_reward",
+      "discriminator": [
+        37,
+        23,
+        45,
+        223,
+        220,
+        218,
+        252,
+        153
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "jar",
+          "docs": [
+            "Typed as tip_jar's account: Anchor checks owner == tip_jar program and the discriminator,",
+            "so a fake \"jar\" owned by another program is rejected before the CPI even happens."
+          ],
+          "writable": true
+        },
+        {
+          "name": "recipient",
+          "writable": true
+        },
+        {
+          "name": "tipper",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "reward_mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  119,
+                  97,
+                  114,
+                  100,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          },
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "mint_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "tipper_reward_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "tipper"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "reward_mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "tip_jar_program",
+          "address": "E53sP8R8dM68dHLb5FY8oc2ZyNJhBroZPSUCrMewcQNJ"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "RewardsConfig",
+      "discriminator": [
+        27,
+        65,
+        81,
+        182,
+        166,
+        101,
+        190,
+        207
+      ]
+    },
+    {
+      "name": "TipJarAccount",
+      "discriminator": [
+        242,
+        15,
+        143,
+        151,
+        249,
+        87,
+        133,
+        23
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "RewardMintedEvent",
+      "discriminator": [
+        204,
+        198,
+        193,
+        48,
+        72,
+        80,
+        46,
+        214
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "TipTooSmall",
+      "msg": "Tip is too small to earn any reward"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidRecipient",
+      "msg": "Recipient does not match the jar owner"
+    },
+    {
+      "code": 6002,
+      "name": "ArithmeticOverflow",
+      "msg": "Arithmetic overflow"
+    }
+  ],
+  "types": [
+    {
+      "name": "RewardMintedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "tipper",
+            "type": "pubkey"
+          },
+          {
+            "name": "jar",
+            "type": "pubkey"
+          },
+          {
+            "name": "tip_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "reward_units",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RewardsConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "reward_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_tips_routed",
+            "type": "u64"
+          },
+          {
+            "name": "total_lamports_routed",
+            "type": "u64"
+          },
+          {
+            "name": "total_rewards_minted",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "mint_authority_bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TipJarAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "total_tips",
+            "type": "u64"
+          },
+          {
+            "name": "total_volume_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

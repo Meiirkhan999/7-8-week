@@ -1,0 +1,48 @@
+{
+  "module": "12_security_lab",
+  "status": "SUCCESS",
+  "vulnerable_program": "7XjM99vjBopv1ExKGpjrW3sS9buTB29G6DJiMoHUdsW2",
+  "secure_program": "6igRCJBV2PQaEkVnLhLfe71tUsWdktA11dcebVKnCSEh",
+  "attacks": {
+    "VULN-1 missing signer": {
+      "vulnerable": {
+        "exploited": true,
+        "detail": "drained 0.5 SOL from the vault"
+      },
+      "secure": {
+        "exploited": false,
+        "detail": "blocked: AccountNotSigner"
+      }
+    },
+    "VULN-2 missing ownership check": {
+      "vulnerable": {
+        "exploited": true,
+        "detail": "drained 0.5 SOL from the vault"
+      },
+      "secure": {
+        "exploited": false,
+        "detail": "blocked: ConstraintSeeds"
+      }
+    },
+    "VULN-3 unchecked arithmetic": {
+      "vulnerable": {
+        "exploited": true,
+        "detail": "drained 0.4 SOL from the vault"
+      },
+      "secure": {
+        "exploited": false,
+        "detail": "blocked: InsufficientBalance"
+      }
+    },
+    "VULN-4 type cosplay": {
+      "vulnerable": {
+        "exploited": true,
+        "detail": "drained 0.5 SOL from the vault"
+      },
+      "secure": {
+        "exploited": false,
+        "detail": "blocked: AccountDiscriminatorMismatch"
+      }
+    }
+  }
+}

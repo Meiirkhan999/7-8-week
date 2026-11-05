@@ -1,0 +1,22 @@
+{
+  "module": "13_rwa_payments",
+  "status": "SUCCESS",
+  "cluster": "http://127.0.0.1:8899",
+  "mint": "8p5BNdRH2mPusbTiZvjDhEAuoPxCFxc16jFgiLATFfLH",
+  "symbol": "tUSD",
+  "extensions": [
+    "MetadataPointer",
+    "TokenMetadata",
+    "DefaultAccountState(Frozen)",
+    "PermanentDelegate"
+  ],
+  "mint_tx_signature": "27bccHhtPYmbwD7G3vTLcE4wEtxoJ4ZDEfudqGJkRH84ULBx4RGrZjDJvTUmR3HmEdX8f63r3LTvMkbUZNQXmQBf",
+  "invoice_id": "INV-2026-6820",
+  "invoice_url": "solana:CUpNx7r3272mtMtuNENHDNFqZaVE4fmtNP6wcAd5VQFp?amount=250.50&spl-token=8p5BNdRH2mPusbTiZvjDhEAuoPxCFxc16jFgiLATFfLH&reference=CgVqxp29W7Z1aagpdMr1sow48dfVVuStMW6hEk4gN8KQ&label=Freelance%20Studio&message=Landing%20page%20design%2C%20November&memo=INV-2026-6820",
+  "payment_tx_signature": "3Bd333cLzE9Uo7Pi9JA3xSD4GDB3kYTSm8NBCN5wEPoV6n6LHnD1Eg9H6jXSAtx7rQpK7qwasTz3cGp9gUyKJgix",
+  "payment_validated": true,
+  "merchant_balance": "250.50",
+  "kyc_block_error": "Program log: Error: Account is frozen",
+  "clawback_tx_signature": "5t24EUPsD3L8qTW3rpG83Nadrik9EJMu261iKAjEN3Qu9NDqKMGvQSXbQm2m8SpJQg4STDk78uvc2kLNKYk52bFH",
+  "payer_balance_after_clawback": "699.50"
+}

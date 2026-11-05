@@ -1,0 +1,23 @@
+[package]
+name = "tip_rewards"
+version = "0.1.0"
+description = "Composable rewards layer: CPI into tip_jar + SPL Token + Associated Token programs"
+edition = "2021"
+rust-version = "1.75"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "tip_rewards"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build", "tip_jar/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "0.30.1", features = ["init-if-needed"] }
+anchor-spl = "0.30.1"
+tip_jar = { path = "../../../08_mvp_tip_jar/programs/tip_jar", features = ["cpi"] }

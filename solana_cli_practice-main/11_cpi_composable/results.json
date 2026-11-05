@@ -1,0 +1,16 @@
+{
+  "module": "11_cpi_composable",
+  "status": "SUCCESS",
+  "program_id": "CQvQzgw8V9rFgAqmBS4E1qNCgQMHe7agWXhkKNwgZs8r",
+  "composed_programs": {
+    "tip_jar": "E53sP8R8dM68dHLb5FY8oc2ZyNJhBroZPSUCrMewcQNJ",
+    "system": "11111111111111111111111111111111",
+    "associated_token": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+    "spl_token": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+  },
+  "reward_mint": "45bX8Cm3PeR3hhxByXD95m8fpZhV8cXYqEsLY7Lqqw5c",
+  "jar_pda": "7SKYLq2cWYd9EYa3v8oDhtku1J5piJaPQTaksjMnk5H2",
+  "tipper": "BdnHGm5AoPr3TPhThFzZv5DwDxZyjUeXDQQYwf8d6C2L",
+  "rewards_minted_units": 75000000,
+  "first_tip_tx_signature": "3vgEMnb2n9hX1DU6TR76UaHoUuPuXgojUujZLT6WXPdZPwdVGya3QkmNoSMMseCacJYp2vcmG1vGP661jRRugwYR"
+}

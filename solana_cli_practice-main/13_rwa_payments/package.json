@@ -1,0 +1,19 @@
+{
+  "name": "13-rwa-payments",
+  "version": "1.0.0",
+  "description": "Week 13: permissioned Token-2022 stablecoin + Solana Pay invoices for cross-border payments",
+  "scripts": {
+    "start": "tsx scripts/stablecoin.ts",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.9",
+    "@solana/spl-token-metadata": "^0.1.6",
+    "@solana/web3.js": "^1.95.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

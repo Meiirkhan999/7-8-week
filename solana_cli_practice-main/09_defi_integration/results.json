@@ -1,0 +1,18 @@
+{
+  "module": "09_defi_integration",
+  "status": "SUCCESS",
+  "cluster": "http://127.0.0.1:8899",
+  "usd_amount": 5,
+  "pyth_usd_per_sol": 93.572287,
+  "pyth_publish_time": "2026-11-03T16:00:46.000Z",
+  "jupiter_usd_per_sol": 93.57131,
+  "jupiter_route": [
+    "TesseraV (100%)"
+  ],
+  "deviation_pct": 0.001,
+  "tip_lamports": 53434624,
+  "received_usd": 5,
+  "jar_pda": "7cyNXiorMZUnrRHEzySWwN5QdFkoqYnwKz44UNngoLtU",
+  "creator": "4JgjWRMisHJ1S2rwvdXzmNszb2Df6WoBQLBXFo5XXs1X",
+  "tx_signature": "3FtR9Mb17k9abpxkfetFd9Sy95hkjp8BxzMuwdGpF9TG14uts3hQCKCj4iXzFGour7uEPEXEPZJS14otLmAat2SG"
+}

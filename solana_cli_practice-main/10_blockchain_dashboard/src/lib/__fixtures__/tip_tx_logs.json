@@ -1,0 +1,13 @@
+{
+  "signature": "3DcVEqRSwNnYbFFUpRYiztVQ3kZamyB75XQzLVTTd88QJEde4QM7NhMGgnzPEDxhDm1KyRTuqdeke4jDLkzP7bA3",
+  "logs": [
+    "Program E53sP8R8dM68dHLb5FY8oc2ZyNJhBroZPSUCrMewcQNJ invoke [1]",
+    "Program log: Instruction: Tip",
+    "Program 11111111111111111111111111111111 invoke [2]",
+    "Program 11111111111111111111111111111111 success",
+    "Program data: 7AJtAeEcP2fj8Fa1mshNwwbAf9n1LgW67ckcsoucdzUfFjShjN1NV9NDYUbrKR7SLMemhge42l+TzKQi+6dB4fzZYTDOJyy7disDJ8vyEIxTNDvzyc+TS5tZD6fn8l9wFSuBuemjZ6qhIy4DAAAAAB0AAAAkNS4wMCB0aXAgQCAkOTMuNzEvU09MIChQeXRoKQEAAAAAAAAAoSMuAwAAAAA=",
+    "Program log: Tip received: 53355425 lamports from FDgchJxac4Wfv8drcjLzzt63WaLHwBaYUFzxLhHbe1wQ to 8xH9d5NZVshAHqKiF1QCPHeFn1fa516wqtFDwgQXpa41. Total tips: 1",
+    "Program E53sP8R8dM68dHLb5FY8oc2ZyNJhBroZPSUCrMewcQNJ consumed 31521 of 200000 compute units",
+    "Program E53sP8R8dM68dHLb5FY8oc2ZyNJhBroZPSUCrMewcQNJ success"
+  ]
+}

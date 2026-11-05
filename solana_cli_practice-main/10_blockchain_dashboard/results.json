@@ -1,0 +1,34 @@
+{
+  "module": "10_blockchain_dashboard",
+  "status": "SUCCESS",
+  "cluster": "http://127.0.0.1:8899",
+  "wallet": {
+    "address": "FDgchJxac4Wfv8drcjLzzt63WaLHwBaYUFzxLhHbe1wQ",
+    "sol": 499999999.71751946,
+    "tokens": 0,
+    "recent_txs": 11,
+    "success_rate": 1
+  },
+  "program": {
+    "id": "E53sP8R8dM68dHLb5FY8oc2ZyNJhBroZPSUCrMewcQNJ",
+    "recent_txs": 10,
+    "success_rate": 1,
+    "bucket_seconds": 60,
+    "buckets": 5,
+    "decoded_events": 5,
+    "last_event": {
+      "signature": "3FtR9Mb17k9abpxkfetFd9Sy95hkjp8BxzMuwdGpF9TG14uts3hQCKCj4iXzFGour7uEPEXEPZJS14otLmAat2SG",
+      "blockTime": 1793721653,
+      "name": "TipReceivedEvent",
+      "data": {
+        "jar": "7cyNXiorMZUnrRHEzySWwN5QdFkoqYnwKz44UNngoLtU",
+        "tipper": "FDgchJxac4Wfv8drcjLzzt63WaLHwBaYUFzxLhHbe1wQ",
+        "recipient": "4JgjWRMisHJ1S2rwvdXzmNszb2Df6WoBQLBXFo5XXs1X",
+        "amount": "53434624",
+        "message": "$5.00 tip @ $93.57/SOL (Pyth)",
+        "total_tips": "1",
+        "total_volume_lamports": "53434624"
+      }
+    }
+  }
+}
